@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Tindog - Login</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #ff4c68;
+    }
+
+    .container {
+      max-width: 400px;
+      margin: 0 auto;
+      padding: 20px;
+      border: 1px solid #ddd;
+      background-color: transparent;
+      margin-top: 100px;
+      color: #ffffff;
+    }
+
+    .login-heading {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      font-size: 24px;
+      font-weight: bold;
+      margin-bottom: 20px;
+    }
+
+    .login-heading-line {
+      border: none;
+      border-top: 1px solid #ffffff;
+      margin-top: 10px;
+      margin-bottom: 20px;
+    }
+
+    .submit-button {
+      display: flex;
+      justify-content: center;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2 class="text-center login-heading">Tindog - Login</h2>
+    <hr class="login-heading-line">
+    <form id="login-form">
+      <div class="form-group">
+        <label for="email">Email address:</label>
+        <input type="email" class="form-control" id="email" placeholder="Enter email">
+      </div>
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" class="form-control" id="password" placeholder="Enter password">
+      </div>
+      <div class="form-group form-check">
+        <input type="checkbox" class="form-check-input" id="remember">
+        <label class="form-check-label" for="remember">Remember me</label>
+      </div>
+      <div class="submit-button">
+        <button type="Login" class="btn btn-primary">Submit</button>
+      </div>
+    </form>
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+
+  <script>
+    $(document).ready(function() {
+      // Handle form submission
+      $("#login-form").submit(function(e) {
+        e.preventDefault(); // Prevent form submission
+        window.location.href = "index.html"; // Replace "other-page.html" with the actual URL you want to redirect to
+      });
+    });
+  </script>
+</body>
+</html>
